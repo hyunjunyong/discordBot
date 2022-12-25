@@ -1,16 +1,10 @@
-import { CommandInteraction, Client } from 'discord.js';
-import { Command } from '../command';
+import { SlashCommandBuilder } from 'discord.js';
 
-export const Hello: Command = {
-  name: 'hello',
-  description: 'Returns a greeting',
-  // type: "CHAT_INPUT",
-  run: async (client: Client, interaction: CommandInteraction) => {
-    const content = 'Hello there!';
-
-    await interaction.followUp({
-      ephemeral: true,
-      content,
-    });
+export default {
+  data: new SlashCommandBuilder()
+    .setName('hello')
+    .setDescription('Replies with Pong!'),
+  async execute(interaction: { reply: (arg0: string) => any }) {
+    await interaction.reply('Pong!');
   },
 };
