@@ -19,6 +19,7 @@
   "homepage": "https://github.com/hyunjunyong/discordBot#readme",
   "dependencies": {
     "@types/node": "^18.11.17",
+    "axios": "^1.2.1",
     "discord.js": "^14.7.1",
     "dotenv": "^16.0.3",
     "ts-node": "^10.9.1",
